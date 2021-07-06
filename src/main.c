@@ -58,7 +58,7 @@ void loadConfig() {
     char path[MSG_BUFSIZE];
     char *p;
     FILE *f;
-    GetModuleFileName(NULL, path, MSG_BUFSIZE);
+    GetModuleFileNameA(NULL, path, MSG_BUFSIZE);
     LOG("Executable path: %s", path);
     p = strrchr(path, '\\');
     if (p == NULL) p = strrchr(path, '/'); // holy shit
